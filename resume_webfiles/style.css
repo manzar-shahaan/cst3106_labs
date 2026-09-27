@@ -1,0 +1,87 @@
+@import url(https://fonts.bunny.net/css?family=fahkwang:200,300|quantico:400,400i,700);
+
+body {
+  background-color: white;
+  color: black;
+  font-family: quantico;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+.text-centered {
+    text-align: center;
+}
+
+#main-header {
+    font-family: 'Fahkwang', sans-serif;
+}
+
+#footer {
+    margin-top: auto;
+}
+
+footer {
+    display: flex;
+    font-family: 'Fahkwang;', sans-serif;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about-p {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+#skill-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+#experience {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1em; 
+    margin: 0.5rem;
+}
+
+.experience-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em; 
+    margin: 0.5rem;
+    text-align: center;
+}
+
+#experience-item-center {
+    border-left: 2px solid;
+    border-right: 2px solid;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  #experience {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #experience-item-center {
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      border-left: none;
+      border-right: none;
+  }
+}
