@@ -48,11 +48,13 @@ footer {
 #skill-items {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    /*text-align: center;*/
 }
 
 #experience {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 1em; 
     margin: 0.5rem;
 }
@@ -71,11 +73,75 @@ footer {
     border-right: 2px solid;
 }
 
+.experience-items-titles {
+    font-style: italic;
+}
+
+.experience-items-periods {
+    font-size: 75%;
+}
+
+#project {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1em; 
+    margin: 0.5rem;
+}
+
+.project-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em; 
+    margin: 0.5rem;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#project-item-first {
+    border-right: 1px solid;
+    margin-right: 0%;
+}
+
+#project-item-second {
+    border-left: 1px solid;
+    margin-left: 0%;
+}
+
+#education {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0.5em; 
+    margin: 0.25rem;
+}
+
+.education-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em; 
+    margin: 0.25rem;
+    text-align: center;
+}
+
+#education-item-first {
+    border-right: 1px solid;
+    margin-right: 0%;
+}
+
+#education-item-second {
+    border-left: 1px solid;
+    margin-left: 0%;
+}
+
 /* Tablet breakpoint */
 @media (max-width: 768px) {
   #experience {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   #experience-item-center {
@@ -83,5 +149,47 @@ footer {
       border-bottom: 2px solid;
       border-left: none;
       border-right: none;
+  }
+
+  .skill-items {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  #project {
+      display: flex;
+      flex-direction: column;
+  }
+
+  #project-item-first {
+      border-right: none;
+      border-bottom: 1px solid;
+  }
+
+  #project-item-second {
+      border-left: none;
+      border-top: 1px solid;
+  }
+
+  #education {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .education-items {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  #education-item-first {
+      border-right: none;
+      border-bottom: 1px solid;
+  }
+
+  #education-item-second {
+      border-left: none;
+      border-top: 1px solid;
   }
 }
