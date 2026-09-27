@@ -1,9 +1,16 @@
 @import url(https://fonts.bunny.net/css?family=fahkwang:200,300|quantico:400,400i,700);
 
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
-  background-color: white;
-  color: black;
-  font-family: quantico;
+    max-width: 1750px;
+    background-color: white;
+    color: black;
+    font-family: quantico;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -110,6 +117,7 @@ h3 {
 
 /* Desktop breakpoint */
 @media screen and (width >= 768px) {
+
     #skill-items {
         display: flex;
         justify-content: space-evenly;
