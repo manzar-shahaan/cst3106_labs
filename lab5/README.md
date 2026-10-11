@@ -9,8 +9,6 @@ The scoring sheet contains two sections
 
 If a player manages to score at least 63 points (an average of three of each number) in the upper section, they are awarded a bonus of 50 points.
 
-- One Pair: Two dice showing the same number. Score: Sum of those two dice.
-- Two Pairs: Two different pairs of dice. Score: Sum of dice in those two pairs.
 - Three of a Kind: Three dice showing the same number. Score: Sum of those three dice.
 - Four of a Kind: Four dice with the same number. Score: Sum of those four dice.
 - Small Straight: The combination 1-2-3-4-5. Score: 15 points (sum of all the dice).
