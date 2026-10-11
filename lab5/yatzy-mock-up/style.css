@@ -1,0 +1,84 @@
+@import url(https://fonts.bunny.net/css?family=geist-pixel:400);
+
+body {
+    background-color: #0b0d10;
+    color: white;
+}
+
+main {
+    min-height: 100vh;
+}
+
+main > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 100vw;
+    background-color: #4ba64f;
+    border: 15px solid #9b624d;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Geist Pixel', display;
+    font-size: 8rem;
+}
+
+#board-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 7.5px;
+}
+
+#player-area-and-table {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-evenly;
+}
+
+#player-area {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+}
+
+#opponent-dice, #my-dice {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.opponent-dice-selection, .my-dice-selection {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: 2px solid grey;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Desktop breakpoint */
+@media screen and (width >= 768px) {
+    
+}
