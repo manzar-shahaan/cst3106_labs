@@ -1,0 +1,194 @@
+@import url(https://fonts.bunny.net/css?family=geist-pixel:400|chakra-petch:400);
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: #0b0d10;
+    color: white;
+}
+
+main {
+    min-height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 2.5rem);
+    width: 100vw;
+    background-color: #4ba64f;
+    border: 8px solid #9b624d;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Geist Pixel', 'Chakra Petch', sans-serif;
+    font-size: 2.5rem;
+}
+
+header.in-game {
+    font-size: 1.5rem;
+    max-height: 3rem;
+}
+
+#board-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    min-height: 0;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  font-size: 0.55rem;
+}
+
+th, td {
+  padding: 4px 6px;
+}
+
+#player-area-and-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    align-items: center;
+}
+
+#player-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    padding: 5px;
+}
+
+#opponent-dice, #my-dice {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.opponent-dice-selection, .my-dice-selection {
+    --pip: 0.55rem;
+    width: calc(var(--pip) * 5);
+    height: calc(var(--pip) * 5);
+    border: 2px solid grey;
+}
+
+.opponent-dice-selection .dice, .my-dice-selection .dice {
+    --pip: inherit;
+}
+
+#dice-roll-render .dice {
+    --pip: 0.55rem;
+}
+
+#board-center {
+    display: flex;
+    justify-content: center;
+}
+
+#dice-roll-render {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+#roll-dice-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#score-table {
+    align-self: center;
+    max-height: 100%;
+    overflow-y: auto;
+    width: 50%;
+}
+
+.score-cell {
+    cursor: pointer;
+}
+
+.score-cell:not(.used):hover {
+    text-decoration: underline;
+}
+
+.score-cell.used {
+    cursor: default;
+}
+
+/* Desktop breakpoint */
+@media screen and (min-width: 768px) {
+    #board {
+        border-width: 15px;
+    }
+
+    header {
+        font-size: 8rem;
+    }
+
+    header.in-game {
+        font-size: 3rem;
+        max-height: 6rem;
+    }
+
+    #dice-roll-render .dice {
+        --pip: 0.75rem;
+    }
+
+    #player-area-and-table {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #player-area {
+        width: 50%;
+        height: 100%;
+        display: flex;
+    }
+
+    #score-table {
+        display: flex;
+        justify-content: space-evenly;
+        align-self: center;
+        max-height: 100%;
+        overflow-y: auto;
+        width: 50%;
+    }
+
+    .opponent-dice-selection, .my-dice-selection {
+        --pip: 0.75rem;
+    }
+}
